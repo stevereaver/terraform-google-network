@@ -38,6 +38,7 @@ module "subnets" {
   network_name     = module.vpc.network_name
   subnets          = var.subnets
   secondary_ranges = var.secondary_ranges
+  module_depends_on = [module.vpc.network_name]
 }
 
 /******************************************
